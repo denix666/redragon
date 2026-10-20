@@ -34,7 +34,7 @@ The keyboard exposes a vendor HID interface used to read/write 132 per-key RGB v
 HID access requires either root privileges or udev rules. Create `/etc/udev/rules.d/99-redragon.rules`:
 
 ```
-SUBSYSTEM=="input", ATTRS{idVendor}=="2e3c", ATTRS{idProduct}=="c365", MODE="0660", GROUP="plugdev"
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="2e3c", ATTRS{idProduct}=="c365", MODE="0660", GROUP="input", TAG+="uaccess"
 ```
 
 Then reload:
