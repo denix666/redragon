@@ -1,0 +1,19 @@
+
+[package]
+name = "redragon"
+version = "1.0.0"
+edition = "2024"
+authors = ["Denis Salmanovich"]
+license = "MIT"
+documentation = "README.md"
+description = "Leds programmer for keyboard redragon K686BG-RGB-M"
+
+[dependencies]
+eframe = { version = "0.37", features = ["glow"] }
+anyhow = "1"
+toml = "1.1"
+serde = { version = "1.0", features = ["derive"] }
+dirs = "7.0"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png"] }
+hidapi = "2.6.7"
+serde_json = "1"
